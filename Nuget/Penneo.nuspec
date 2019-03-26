@@ -19,6 +19,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="penneo.dll" target="lib\net4"/>
+    <file src="penneo.dll" target="lib\net40"/>
   </files>
 </package>
