@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,7 +99,9 @@
     <Compile Include="Util\TimeUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -105,6 +109,13 @@
          we won't keep the built binary in the repository -->
     <!-- <PostBuildEvent>rem copy /Y "$(TargetDir)$(TargetName).dll" "$(SolutionDir)\..\Binaries\Unsigned\$(TargetName).dll"</PostBuildEvent> -->
   </PropertyGroup>
+  <Import Project="..\packages\Unik.MsBuild.StrongName.1.0.0.1\build\Unik.MsBuild.StrongName.targets" Condition="Exists('..\packages\Unik.MsBuild.StrongName.1.0.0.1\build\Unik.MsBuild.StrongName.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Unik.MsBuild.StrongName.1.0.0.1\build\Unik.MsBuild.StrongName.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Unik.MsBuild.StrongName.1.0.0.1\build\Unik.MsBuild.StrongName.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
