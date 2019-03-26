@@ -38,5 +38,10 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("2.0.0.0")]
-[assembly: InternalsVisibleTo("PenneoTests")]
-[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
+[assembly: InternalsVisibleTo("PenneoTests, PublicKey="
+  + "002400000480000094000000060200000024000052534131000400000100010033ddbe84b0459d"
+  + "4a658030f4b726ef8cd8766fd3712a8b00259ef6a71b3d850bdf6fde76a9e714cc37708fc5c834"
+  + "9d403a03692d8935e4a8c0b248268da51147e20b8cfbe540d684b65ab19967c3f24ac6a054f503"
+  + "fdf7c3da2cbffbb9757c8ea647bc867523819d14bd958dfbd57b620590439f993f60da84d0cf3f"
+  + "55ad42dd"
+  )]
