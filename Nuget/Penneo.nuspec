@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Penneo.SDK</id>
-    <version>2.0.0</version>
+    <id>Penneo.SDK.rebuild</id>
+    <version>$version$</version>
     <title>Penneo .Net SDK</title>
     <authors>Penneo</authors>
     <owners>Penneo</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Penneo/sdk-net</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/Penneo/sdk-net/master/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>SDK for using Penneo in your own C# projects</description>
+    <description>SDK for using Penneo in your own C# projects, rebuild/repacked by Unik</description>
     <copyright>Copyright 2014</copyright>
     <tags>Penneo sign signing digital</tags>
     <dependencies>
